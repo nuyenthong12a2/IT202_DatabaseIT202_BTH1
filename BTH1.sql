@@ -66,5 +66,20 @@ VALUES
 (5, N'Vũ Hoàng H', '0908901234'),
 (5, N'Ngô Tất I', '0909012345'),
 (2, N'Lý Tiểu K', '0909123456');
+-- Cập nhạta trạng thái phòng chiếu số 1 
+UPDATE rooms
+SET status = 'maintenance' 
+WHERE name LIKE '%Phòng 01%';
+
+UPDATE showtimes 
+SET room_id = 2 
+WHERE room_id = 1;
+
+DELETE FROM bookings
+ 
+WHERE phone = '0987654321';
+
+DELETE FROM movies 
+WHERE id = 3;
  
 
